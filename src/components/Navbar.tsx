@@ -104,8 +104,8 @@ export const Navbar: React.FC = () => {
             Features
           </a>
           <a
-            href="/evolv.apk"
-            download="evolv.apk"
+            href="/Evolv.apk"
+            download="Evolv.apk"
             className="px-4 sm:px-5 py-2 rounded-sm text-xs sm:text-sm font-semibold bg-evolv-lime text-evolv-dark transition-all hover:brightness-110 hover:scale-105"
           >
             Download APK
