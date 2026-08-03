@@ -120,8 +120,8 @@ export const HeroSection: React.FC = () => {
 
         <div className="hero-cta-container flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
           <a
-            href="/evolv.apk"
-            download="evolv.apk"
+            href="/Evolv.apk"
+            download="Evolv.apk"
             className="text-center px-6 sm:px-8 py-4 rounded-sm text-sm sm:text-base font-bold uppercase tracking-[0.12em] bg-evolv-lime text-evolv-dark font-display shadow-[0_0_32px_rgba(202,254,32,0.3)] transition-colors hover:scale-105 hover:brightness-110"
           >
             Download APK — Free

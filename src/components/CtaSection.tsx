@@ -71,8 +71,8 @@ export const CtaSection: React.FC = () => {
           className="cta-form flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto mb-10"
         >
           <a
-            href="/evolv.apk"
-            download="evolv.apk"
+            href="/Evolv.apk"
+            download="Evolv.apk"
             className="px-7 cursor-pointer py-4 rounded-sm font-black uppercase tracking-[0.12em] text-sm bg-evolv-lime text-evolv-dark font-display shadow-[0_0_24px_rgba(202,254,32,0.4)] transition-all hover:brightness-110 hover:scale-105 whitespace-nowrap"
           >
             Get native app

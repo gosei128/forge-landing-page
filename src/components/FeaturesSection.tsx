@@ -44,22 +44,30 @@ export const FeaturesSection: React.FC = () => {
         },
       });
 
-      // Horizontal scroll: animate the track inside the pinned section
-      const track = trackRef.current;
-      if (!track) return;
+      const mm = gsap.matchMedia();
 
-      gsap.to(track, {
-        x: () => -(track.scrollWidth - window.innerWidth),
-        ease: "none",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          pin: true,
-          start: "top top",
-          end: () => `+=${track.scrollWidth - window.innerWidth}`,
-          scrub: 1.5,
-          invalidateOnRefresh: true,
-        },
+      // Only run horizontal scroll pinning on desktop (lg: >= 1024px)
+      mm.add("(min-width: 1024px)", () => {
+        const track = trackRef.current;
+        if (!track) return;
+
+        gsap.to(track, {
+          x: () => -(track.scrollWidth - window.innerWidth),
+          ease: "none",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            pin: true,
+            start: "top top",
+            end: () => `+=${track.scrollWidth - window.innerWidth}`,
+            scrub: 1.5,
+            invalidateOnRefresh: true,
+          },
+        });
       });
+
+      return () => {
+        mm.revert();
+      };
     },
     { scope: sectionRef },
   );
@@ -80,16 +88,17 @@ export const FeaturesSection: React.FC = () => {
       {/* Horizontal scrolling track */}
       <div
         ref={trackRef}
-        className="flex gap-6 sm:gap-8 px-8 sm:px-16 pb-16 sm:pb-24 will-change-transform"
+        className="flex gap-6 sm:gap-8 px-8 sm:px-16 pb-16 sm:pb-24 overflow-x-auto lg:overflow-x-visible scrollbar-none snap-x snap-mandatory will-change-transform"
       >
         {screenshots.map(({ src, label }) => (
           <div
             key={label}
-            className="group relative flex-shrink-0 w-[260px] sm:w-[250px] cursor-pointer"
+            className="group relative flex-shrink-0 w-[260px] sm:w-[250px] cursor-pointer snap-center"
           >
             <img
               src={src}
               alt={label}
+              onLoad={() => ScrollTrigger.refresh()}
               className="w-full h-auto block transition-transform duration-700 group-hover:scale-[1.05] group-hover:-translate-y-5"
             />
           </div>
