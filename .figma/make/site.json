@@ -1,0 +1,10 @@
+{
+  "description": "Evolv is a gamified fitness tracking app that motivates users to level up their workouts through engaging missions, achievement badges, and progress tracking.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
