@@ -33,7 +33,7 @@ export const ArchetypesSection: React.FC = () => {
         .from(
           ".hero-mockup-1",
           {
-            x: 60,
+            x: 70,
             y: 30,
             opacity: 0,
             rotate: -4,
@@ -88,7 +88,7 @@ export const ArchetypesSection: React.FC = () => {
           ref={mockup1Ref}
           src={archetype}
           alt="Missions screen"
-          className={`hero-mockup-1 absolute top-0 right-12 sm:right-50 w-52 sm:w-70   rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] transition-shadow `}
+          className={`hero-mockup-1 absolute bottom-0 right-12  sm:right-25 w-52 sm:w-70   rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] transition-shadow `}
         />
       </div>
     </section>
