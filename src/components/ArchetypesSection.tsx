@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import archetype from "../assets/images/archetypes.png";
+import archetype from "../assets/images/missions.png";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -66,21 +66,22 @@ export const ArchetypesSection: React.FC = () => {
     >
       <div className="text-center lg:text-left z-10">
         <h1 className="text-5xl sm:text-7xl lg:text-8xl leading-none font-black uppercase tracking-tight mb-6 font-display">
-          <span className="hero-title-line inline-block">Pick a Hero</span>
+          <span className="hero-title-line inline-block">Turn your</span>
           <br />
           <span className="hero-title-line inline-block text-evolv-lime">
-            Become the Hero.
+            workouts
           </span>
           <br />
-          <span className="hero-title-line inline-block">Choose your</span>
+          <span className="hero-title-line inline-block">into</span>
           <br />
-          <span className="hero-title-line inline-block">Archetype.</span>
+          <span className="hero-title-line inline-block">Quest.</span>
         </h1>
 
         <p className="hero-subtext text-white/60 text-base sm:text-lg tracking-normal mb-8 sm:mb-10  lg:text-left">
-          Select your target archetype—from legendary anime physiques to elite
-          athletic builds. Evolv maps out your exact training quest, tracking
-          every mission until you unlock your dream physique.
+          Ditch the boring logs. Transform daily and weekly fitness goals into
+          gamified 'Active Missions.' Hit PRs, complete sessions, and see your
+          Level 1 Newbie rise as you rack up experience points. Every rep is a
+          step toward leveling up.
         </p>
       </div>
       <div className="relative flex justify-center lg:justify-end items-center h-95 sm:h-120">

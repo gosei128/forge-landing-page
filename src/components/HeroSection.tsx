@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import missionsImg from "../assets/images/missions.png";
+import missionsImg from "../assets/images/training.png";
 import dashboardImg from "../assets/images/dashboard.png";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
