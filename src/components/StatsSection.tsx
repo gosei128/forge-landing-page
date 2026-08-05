@@ -20,7 +20,7 @@ export const StatsSection: React.FC = () => {
     { target: 1300, suffix: "+", label: "Excercises", formatComma: true },
     { target: 3, suffix: "+", label: "Missions A Week" },
     { target: 6, suffix: "", label: "Ranks", formatComma: false },
-    { target: 47, suffix: "M+", label: "XP Earned" },
+    { target: 25, suffix: "k+", label: "XP Earned" },
   ];
 
   useGSAP(
